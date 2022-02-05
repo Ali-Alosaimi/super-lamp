@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Models.Database.Entities.Orders>
+
+@{ ViewData["Title"] = "Products"; }
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .table thead th {
+        width: 10%;
+    }
+    .btn-info {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        width: 100%;
+        margin-bottom: 20px;
+        text-decoration: underline
+    }
+</style>
+<div class="container">
+    <h2>Placed Orders</h2>
+    @{
+        if (Model.ToList().Count < 1)
+        {
+            <div class="row">
+                <div class="col-lg-12">
+                    <span class="text-warning text-center">No Order Yet</span>
+                </div>
+            </div>
+        }
+    }
+    @foreach (var item in Model)
+    {
+<div class="col-lg-12">
+    <a href="#demo-@item.orderID" class="btn btn-info" data-toggle="collapse">Order # @item.orderID</a>
+    <div id="demo-@item.orderID" class="collapse">
+        <div class="table-responsive">
+            <table class="table table-responsive table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Price</th>
+                        <th scope="col">Product Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item1 in item.OrderDetails)
+                    {
+                        <tr>
+                            <th scope="row">@item1.ProductName</th>
+                            <td>@item1.ProductPrice</td>
+                            <td>@item1.qty</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+}
+
+</div>
+
+
+<script>
+    $(document).ready(function ()=> {
+
+    });
+</script>

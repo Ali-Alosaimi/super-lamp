@@ -1,0 +1,64 @@
+﻿
+@model IEnumerable<Models.Database.Entities.ProductCart>
+
+@{ ViewData["Title"] = "Card Details"; }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="text-center">Bank Details</h4>
+        </div>
+    </div>
+    <br />
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="4242 4242 4242 4242" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 form-group">
+                    <label>Exp Month</label>
+                    <input type="number" max="12" min="1" placeholder="12" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 form-group">
+                    <label>Exp Year</label>
+                    <input type="number" min="2024" placeholder="2024" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 form-group">
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <a href"="/Product/ViewCart" class="btn btn-secondary">Back</a>
+            <a href="/Product/PlaceAnOrder" type="button" class="btn btn-primary">Place Order</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(() => {
+
+        var errorMessage = "@(TempData["ErrorMessage"] as string)";
+        var successMessage = "@(TempData["SuccessMessage"] as string)";
+        if (errorMessage !== "") toastr.error(errorMessage);
+        if (successMessage !== "") toastr.success(successMessage);
+    })
+</script>

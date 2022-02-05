@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Models.Response.Products.ProductsResponse>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Our Online Shopping System</h1>
+</div>
+
+
+
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .table thead th {
+        width: 10%;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-3">
+                <div class="card">
+                    <img src="~/Resources/image/@item.image" style="width:100% !important;height:200px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.productName</h5>
+                        <h5 class="card-title float-right"># @item.catName</h5>
+                        <p class="card-text">@item.price $</p>
+                        <a class="btn btn-primary btn-sm" href="/Product/AddToCart?productId=@item.productId">
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(() => {
+
+        var errorMessage = "@(TempData["ErrorMessage"] as string)";
+        var successMessage = "@(TempData["SuccessMessage"] as string)";
+        if (errorMessage !== "") toastr.error(errorMessage);
+        if (successMessage !== "") toastr.success(successMessage);
+    })
+</script>

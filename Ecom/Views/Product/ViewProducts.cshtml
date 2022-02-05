@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Models.Database.Entities.Products>
+
+@{ ViewData["Title"] = "Products"; }
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    .table thead th {
+        width: 10%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-responsive table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Id</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Category Id</th>
+                            <th scope="col">Product Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+
+            <tr>
+                <th scope="row">@item.productId</th>
+                <td>@item.productName</td>
+                <td>@item.catId</td>
+                <td>@item.price</td>
+                <td>
+                    <a href="/Product/EditProduct?productId=@item.productId">Edit </a>
+                    | <a href="/Product/DeleteProduct?productId=@item.productId">
+                        Delete
+                    </a>
+                    | <a href="/Product/AddToCart?productId=@item.productId">
+                        Add to cart
+                    </a>
+                </td>
+            </tr>}
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>

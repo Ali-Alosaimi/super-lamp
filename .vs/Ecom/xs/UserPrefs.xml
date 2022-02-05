@@ -1,0 +1,64 @@
+﻿<Properties StartupConfiguration="{AD383EFE-17E6-43A8-AF52-A2DD772F0640}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecom/Views/Auth/Login.cshtml">
+    <Files>
+      <File FileName="Ecom/Views/Product/ViewCart.cshtml" Line="88" Column="9" />
+      <File FileName="Ecom/Controllers/ProductController.cs" />
+      <File FileName="Ecom/Controllers/AuthController.cs" />
+      <File FileName="Ecom/Views/Product/ViewOrders.cshtml" />
+      <File FileName="Ecom/Views/Shared/_Layout.cshtml" />
+      <File FileName="Ecom/Views/Product/CardDetails.cshtml" />
+      <File FileName="Ecom/Views/Auth/Login.cshtml" Line="180" Column="67" />
+      <File FileName="Ecom/Controllers/HomeController.cs" />
+      <File FileName="Ecom/Controllers/CategoryController.cs" />
+      <File FileName="Models/Database/Entities/UserCard.cs" />
+      <File FileName="Models/Database/Entities/ProductCart.cs" />
+      <File FileName="Models/Database/Entities/orderDetails.cs" />
+      <File FileName="Models/Database/Context/DatabaseContext.cs" Line="47" Column="37" />
+      <File FileName="Ecom/Views/Home/Index.cshtml" />
+      <File FileName="Models/Request/RegisterRequest.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ecom" expanded="True">
+            <Node name="Ecom" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Auth" expanded="True">
+                  <Node name="Login.cshtml" selected="True" />
+                </Node>
+                <Node name="Categories" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Product" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="Resources" expanded="True">
+                  <Node name="image" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Models" expanded="True">
+              <Node name="Database" expanded="True">
+                <Node name="Context" expanded="True" />
+                <Node name="Entities" expanded="True" />
+              </Node>
+              <Node name="Request" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Ecom PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bino/Downloads/Ecom/Ecom/Views/Product/CardDetaills.cs" relfile="Ecom/Views/Product/CardDetaills.cs" line="1" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

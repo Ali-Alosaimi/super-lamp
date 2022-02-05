@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.Database.Entities.Categories>
+
+@{
+
+    ViewData["Title"] = "Categories";
+}
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .table thead th {
+        width: 10%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-responsive table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Category Id</th>
+                            <th scope="col">Category Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <th scope="row">@item.catId</th>
+                                <td>@item.catName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>

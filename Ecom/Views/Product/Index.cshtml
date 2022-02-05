@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Models.Database.Entities.Products>
+
+@{
+    
+    ViewData["Title"] = "Products";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-responsive table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Id</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <th scope="row">@item.productId</th>
+                                <td>@item.productName</td>
+                                <td>@item.price</td>
+                                <td>
+                                    <img style="width:50px;height:auto" src="~/Resources/image/@item.image" class="img-thumbnail img-fluid" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
