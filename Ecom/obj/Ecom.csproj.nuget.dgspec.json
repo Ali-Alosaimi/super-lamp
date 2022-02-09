@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Ecom/Ecom.csproj": {}
+    "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Ecom\\Ecom.csproj": {}
   },
   "projects": {
-    "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Ecom/Ecom.csproj": {
+    "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Ecom\\Ecom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Ecom/Ecom.csproj",
+        "projectUniqueName": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Ecom\\Ecom.csproj",
         "projectName": "Ecom",
-        "projectPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Ecom/Ecom.csproj",
-        "packagesPath": "/Users/eapplestore/.nuget/packages/",
-        "outputPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Ecom/obj/",
+        "projectPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Ecom\\Ecom.csproj",
+        "packagesPath": "C:\\Users\\9227\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Ecom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eapplestore/.config/NuGet/NuGet.Config"
+          "C:\\Users\\9227\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj": {
-                "projectPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj"
+              "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj"
               }
             }
           }
@@ -93,26 +95,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj": {
+    "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj",
+        "projectUniqueName": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj",
-        "packagesPath": "/Users/eapplestore/.nuget/packages/",
-        "outputPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/obj/",
+        "projectPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\9227\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eapplestore/.config/NuGet/NuGet.Config"
+          "C:\\Users\\9227\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -179,7 +183,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

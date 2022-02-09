@@ -19,7 +19,16 @@ namespace Models.Database.Context
         public DbSet<UserCard> userCards { get; set; }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
+        //public DatabaseContext() { }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.
+        //        UseSqlServer(@"Server=.\SQLEXPRESS;Database=Binosaimi;Trusted_Connection=True;");
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

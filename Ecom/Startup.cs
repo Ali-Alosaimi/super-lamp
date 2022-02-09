@@ -25,7 +25,7 @@ namespace Ecom
             services.AddControllersWithViews();
 
             //DB
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(@"Server=localhost,1433;Database=Binosaimi;User=sa;Password=eLvisH@9699"));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Binosaimi;Trusted_Connection=True;"));
             
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

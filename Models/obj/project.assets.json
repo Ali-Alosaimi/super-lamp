@@ -6177,24 +6177,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/eapplestore/.nuget/packages/": {}
+    "C:\\Users\\9227\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj",
+      "projectUniqueName": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/Models.csproj",
-      "packagesPath": "/Users/eapplestore/.nuget/packages/",
-      "outputPath": "/Users/eapplestore/Projects/Fiverr/Binosaimi/Ecom/Models/obj/",
+      "projectPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\Models.csproj",
+      "packagesPath": "C:\\Users\\9227\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\9227\\Source\\Repos\\super-lamp\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/eapplestore/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\9227\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6261,7 +6263,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

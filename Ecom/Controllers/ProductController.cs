@@ -10,6 +10,8 @@ using Models.Database.Context;
 using Models.Database.Entities;
 using Models.Request;
 using Newtonsoft.Json;
+using Models.Response.Auth;
+
 
 namespace Ecom.Controllers
 {
@@ -65,23 +67,47 @@ namespace Ecom.Controllers
             var loginString = HttpContext.Session.GetString("user");
             if (loginString == null) return RedirectToAction("Login", "Auth");
 
-            var userId = long.Parse(HttpContext.Session.GetString("userId"));
-            var orders = await _context.Orders.Where(x => x.createdBy == userId).ToListAsync();
-            List<OrderDetails> OrderDetails = new List<OrderDetails>();
-            foreach (var order in orders)
+
+            var user = JsonConvert.DeserializeObject<LoginResponse>(loginString);
+            if (user.roleName.ToLower() == "admin")
             {
-                var ordersDetails = await _context.OrderDetails.Where(x => x.orderID == order.orderID).ToListAsync();
-                foreach (var item in ordersDetails)
+                var orders = await _context.Orders.ToListAsync();
+                List<OrderDetails> OrderDetails = new List<OrderDetails>();
+                foreach (var order in orders)
                 {
-                    var product = await _context.products.Where(x => x.productId == item.productID).SingleOrDefaultAsync();
-                    item.ProductName = product.productName;
-                    item.ProductPrice = product.price;
+                    var ordersDetails = await _context.OrderDetails.Where(x => x.orderID == order.orderID).ToListAsync();
+                    foreach (var item in ordersDetails)
+                    {
+                        var product = await _context.products.Where(x => x.productId == item.productID).SingleOrDefaultAsync();
+                        item.ProductName = product.productName;
+                        item.ProductPrice = product.price;
+                    }
+                    order.OrderDetails = ordersDetails;
                 }
-                order.OrderDetails = ordersDetails;
+                return View(orders);
             }
-            return View(orders);
+            else
+            {
+                var userId = long.Parse(HttpContext.Session.GetString("userId"));
+
+
+                var orders = await _context.Orders.Where(x => x.createdBy == userId).ToListAsync();
+                List<OrderDetails> OrderDetails = new List<OrderDetails>();
+                foreach (var order in orders)
+                {
+                    var ordersDetails = await _context.OrderDetails.Where(x => x.orderID == order.orderID).ToListAsync();
+                    foreach (var item in ordersDetails)
+                    {
+                        var product = await _context.products.Where(x => x.productId == item.productID).SingleOrDefaultAsync();
+                        item.ProductName = product.productName;
+                        item.ProductPrice = product.price;
+                    }
+                    order.OrderDetails = ordersDetails;
+                }
+                return View(orders);
+            }
         }
-        
+
         [Route("/Product/ViewCart")]
         public async Task<IActionResult> ViewCart()
         {
